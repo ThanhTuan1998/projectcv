@@ -7,6 +7,7 @@
     --text-pink: #f79f8f;
     --border-red: #fa5f64;
     --text-white: #fff;
+    --text-gray: #949494;
 }
 .upper {
     text-transform: uppercase;
@@ -28,6 +29,15 @@
 }
 .header__nav ul li a {
     display: block;
-    padding: 20px 25px;
     text-decoration: none;
+    padding: 20px 25px;
+    text-align: center;
+    font-weight: 200;
+    color: var(--text-gray);
+}
+.header__nav ul li a:hover {
+    width: 100%;
+    color: var(--text-pink);
+    border-bottom: 1px solid;
+    transition: 0.4s;
 }
