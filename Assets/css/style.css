@@ -20,7 +20,7 @@ body {
 }
 .d-f {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .f-w {
@@ -83,11 +83,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: left;
-    padding-left: 200px;
+    padding: 0 200px;
     background: url("../img/banner.jpg") no-repeat;
 }
 .bg__title {
-    width: 300px;
+    width: 30%;
 }
 .bg__info h1,
 p,
@@ -97,10 +97,10 @@ button {
     letter-spacing: 2px;
 }
 .bg__info h1 {
-    font-size: 24px;
+    font-size: 9vh;
 }
 .bg__title p {
-    font-size: 9vh;
+    font-size: 24px;
     margin-top: 39px;
 }
 .bg__title button {
@@ -109,7 +109,7 @@ button {
 .button-red {
     padding: 12px 23px;
     border: none;
-    background: linear-gradient(#e66465, #e66465);
+    background: linear-gradient(#e66465, rgb(172, 157, 157));
     border-radius: 3px;
 }
 .button-red:focus {
@@ -119,3 +119,186 @@ button {
     cursor: pointer;
 }
 /*End Info*/
+/*About*/
+.about,
+.title__info,
+.info__icon ul li a {
+    display: flex;
+    align-items: center;
+}
+.about_img {
+    position: relative;
+}
+.about_img img {
+    width: 50%;
+    transform: translate(50%, 25%);
+    z-index: 0;
+}
+.about_img::after {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    content: "";
+    background-color: var(--text-pink);
+    color: red;
+    font-weight: bold;
+    top: 19%;
+    transform: translate(7%);
+    z-index: -1;
+}
+.about_img::before {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border: 2px solid;
+    border-radius: 5px;
+    content: "";
+    background-color: none;
+    color: red;
+    font-weight: bold;
+    top: initial;
+    bottom: -141px;
+    transform: translate(149%);
+}
+.about_info {
+    width: 50%;
+    transform: translate(-10%, 26%);
+}
+.info__left strong {
+    font-weight: bolder;
+}
+.about_info h1 {
+    font-size: 32px;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 40px 0;
+}
+.about_info p {
+    text-transform: capitalize;
+    padding: 20px 0;
+    font-weight: 500;
+    color: var(--text-black);
+}
+.info__icon ul li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 0 20px;
+}
+.info__icon ul li a {
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    font-weight: 400;
+    border: 1px solid rgb(219, 216, 216);
+    text-align: center;
+    border-radius: 50%;
+    color: rgb(110, 106, 106);
+}
+.info__icon ul li a i {
+    margin: auto;
+}
+.info__icon ul li a.active {
+    color: var(--text-black);
+}
+.info__icon ul li a:hover {
+    color: var(--text-black);
+}
+.info__right {
+    margin: 0 70px;
+}
+.decoraton {
+    text-decoration: underline;
+    color: var(--text-gray);
+}
+/*End About
+/*Service*/
+.service {
+    height: 700px;
+    background-color: #f7f7f7;
+    margin-top: 172px;
+    position: relative;
+}
+.title__service {
+    padding: 80px 0;
+    text-align: center;
+}
+.title__service p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: #7e839d;
+}
+.title__service h1 {
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 34px;
+    font-weight: bolder;
+    color: var(--text-black);
+    position: relative;
+}
+.title__service::after {
+    width: 2%;
+    height: 5px;
+    content: "";
+    border: 1px;
+    position: absolute;
+    transform: translate(-50%);
+    background-color: var(--border-red);
+}
+.service__item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 17px;
+    grid-gap: 12px;
+    margin: 0px 447px;
+}
+.service__item img {
+    width: 80%;
+    height: 18vh;
+}
+/*EndService*/
+/*Work*/
+.portfolio {
+    padding: 20px 0;
+}
+.nav_works ul {
+    text-align: center;
+    padding: 10px 0;
+}
+.nav_works ul li {
+    display: inline;
+}
+.nav_works ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: var(--text-black);
+    position: relative;
+}
+.nav_works ul li a::before {
+    width: 100%;
+    content: "";
+    left: 0;
+    bottom: -10px;
+    border-bottom: 4px solid #e66465;
+    position: absolute;
+    opacity: 0;
+}
+.nav_works ul li a:hover {
+    transition: 0.4s;
+    color: var(--border-red);
+}
+.nav_works ul li a:hover::before {
+    transition: 0.4s;
+    width: 100%;
+    opacity: 1;
+}
+.border {
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px solid #d8d5d5;
+    padding: 10px;
+}
+/*End Work*/
